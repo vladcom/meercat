@@ -1,0 +1,58 @@
+.modalLogout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  &-title {
+    margin: 0 0 10px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &-subTitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 244px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      height: 20px;
+    }
+  }
+
+  &-soc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}

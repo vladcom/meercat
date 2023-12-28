@@ -1,0 +1,220 @@
+.reportCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    padding: 10px 0;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      &-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &-line {
+        border-top: 3px solid #a9a9a9;
+      }
+    }
+
+    &-close {
+      position: absolute!important;
+      right: 0!important;
+      z-index: 9999999999;
+
+      svg {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-container {
+    width: 100%;
+    padding: 0 20px;
+
+    &-box {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto 0;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+
+      &-user {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #484848;
+        font-size: 14px;
+      }
+
+      &-time {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #808080;
+        font-size: 14px;
+      }
+
+      &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-height: 600px;
+        }
+      }
+
+      &-text {
+        margin-top: 10px!important;
+        margin-bottom: 20px!important;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: #484848;
+
+        &-showMore {
+          cursor: pointer;
+          font-weight: 500;
+        }
+
+        a {
+          color: #1890ff;
+          transition: all .3s ease-out;
+
+          &:hover {
+            color: #127dde;
+            transition: all .3s ease-out;
+          }
+        }
+      }
+    }
+  }
+
+  &-actions {
+    //height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //position: fixed;
+    width: 100%;
+    //bottom: 0;
+    background: white;
+
+    &-item {
+      z-index: 999999999999999999;
+
+      button {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+
+        svg {
+          font-size: 23px;
+        }
+
+        span {
+          font-weight: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .MuiFormControl-root {
+      width: 80%!important;
+    }
+  }
+}
+
+.reportReport {
+  padding: 0 20px;
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      color: #DF5900;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+
+    &:last-child {
+      border-bottom: 1px solid #ededed;
+    }
+
+    &-item {
+      padding: 0 20px;
+      border-top: 1px solid #ededed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+
+      &:hover {
+        background: #f9f9f9;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+
+  &-bodyMy {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+
+    p {
+      text-align: center;
+    }
+
+    &-actions {
+      display: flex;
+      flex-direction: row;
+      margin: 30px auto 0;
+
+      button {
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+
+    }
+
+  }
+}
+
+.disabledBlock {
+  pointer-events: none;
+  background-color: #f6f6f6;
+}

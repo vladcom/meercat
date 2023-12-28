@@ -1,0 +1,132 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "jsx-a11y", "import"],
+  "ignorePatterns": ["vite.config.ts"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "indent": "off",
+    "@typescript-eslint/indent": ["off"],
+    "react/react-in-jsx-scope": "off",
+    "class-methods-use-this": "off",
+    "space-in-parens": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "consistent-return": "off",
+    "no-void": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "global-require": "off",
+    "valid-jsdoc": [
+      "error",
+      {
+        "prefer": {
+          "arg": "param",
+          "argument": "param",
+          "returns": "return"
+        },
+        "preferType": {
+          "Boolean": "boolean",
+          "Number": "number",
+          "object": "Object",
+          "String": "string"
+        },
+        "requireParamDescription": false,
+        "requireReturnDescription": false
+      }
+    ],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ForInStatement",
+        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ],
+    "react/forbid-prop-types": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [".(scss|css|png|jpg|svg|woff|woff2|ttf|eot|otf)$"]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off",
+    "function-paren-newline": "off",
+    "react/require-default-props": "off",
+    "react/default-props-match-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/prop-types": ["error", { "ignore": ["children"] }],
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }]
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [".", "src"],
+        "project": "./tsconfig.json",
+        "extensions": [".js", ".ts", ".jsx", ".tsx", ".json"],
+        "moduleDirectory": [".", "src", "node_modules"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    },
+    "import/extensions": [".js", ".ts", ".mjs", ".jsx", ".tsx"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "tsconfigRootDir": "./",
+    "project": ["tsconfig.json"]
+  }
+}

@@ -1,0 +1,55 @@
+.navBar {
+  height: 70px;
+  z-index: 1;
+  width: 100%;
+  background: #ffffff;
+  padding: 0 20px;
+  bottom: 0;
+
+  &Top {
+    top: 0 !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+  }
+
+  &Container {
+    height: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &Top {
+      max-width: 100% !important;
+    }
+
+    &Logo {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    &Report {
+      padding: 6px 10px 3px !important;
+    }
+
+    &Button {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      display: flex;
+
+      svg {
+        height: 25px !important;
+      }
+    }
+  }
+}

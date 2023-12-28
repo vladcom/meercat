@@ -1,0 +1,9 @@
+.messageLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  @media all and (max-width: 768px) {
+    padding: 90px 0;
+  }
+}

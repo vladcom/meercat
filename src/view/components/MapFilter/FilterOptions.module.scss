@@ -1,0 +1,87 @@
+.filterOptions {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  &-check {
+    margin-left: 30px;
+    font-size: 18px;
+  }
+
+  &-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-button {
+      display: flex;
+      width: 80px;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+
+  &-container {
+    width: 300px;
+    margin: 0 auto;
+
+    &-title {
+      text-align: center;
+    }
+
+    &-categories {
+      display: flex;
+      flex-direction: column;
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    button {
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 30px;
+      justify-content: space-between;
+    }
+  }
+
+  &-category {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &-density {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+
+    &-button {
+      height: auto !important;
+      width: 200px;
+      margin: 0 auto 10px;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+    &-description {
+      font-size: 12px;
+      text-align: left;
+      color: grey;
+    }
+  }
+}

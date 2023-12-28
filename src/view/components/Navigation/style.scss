@@ -1,0 +1,7 @@
+.navigation {
+  &-hidden {
+    position: absolute!important;
+    cursor: pointer!important;
+    z-index: 1;
+  }
+}

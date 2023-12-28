@@ -1,0 +1,125 @@
+import type { HeatmapLayer } from 'react-map-gl';
+import { ZOOM_FOR_HEATMAP_TO_MARKER_TRANSITION } from 'src/constants/map';
+
+//64ef1e1427590c334308d225 - shoting
+// 64ef1e1427590c334308d22a - homeless
+
+//TODO: Тут должны быть все инцеденты всегда. То есть если показывать "все инцеденты" - передавать полный список айдишников.
+
+// const all = ['+', ['get', '64ef1e1427590c334308d225'], ['get', '64ef1e1427590c334308d22a']];
+
+export const heatmapLayer1: HeatmapLayer = {
+  id: 'heatmap1',
+  minzoom: 6,
+  maxzoom: ZOOM_FOR_HEATMAP_TO_MARKER_TRANSITION,
+  type: 'heatmap',
+  'source-layer': 'dev_s_inc',
+  paint: {
+    // 'heatmap-weight': ['case', ['<', all, 10], 0.5, ['<=', all, 20], 0.5, ['>', all, 20], 0.5, 0.5],
+    'heatmap-intensity': [
+      'interpolate',
+      ['linear'],
+      ['zoom'],
+      0,
+      0.09,
+      10,
+      0.1,
+      11,
+      0.2,
+      12,
+      0.3,
+      13,
+      0.5,
+      22,
+      0.5,
+    ],
+    'heatmap-color': [
+      'interpolate',
+      ['linear'],
+      ['heatmap-density'],
+      0,
+      'rgba(0, 0, 255, 0)',
+      0.1,
+      'hsla(225, 73%, 57%, 0.68)',
+      0.3,
+      'hsla(180, 100%, 50%, 0.65)',
+      0.5,
+      'lime',
+      0.7,
+      'hsla(60, 100%, 50%, 0.84)',
+      1,
+      'hsl(9, 95%, 54%)',
+    ],
+    'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 0, 30, 12, 100, 22, 100],
+    'heatmap-opacity': 1,
+  },
+};
+export const heatmapLayer2: HeatmapLayer = {
+  id: 'heatmap2',
+  minzoom: 0,
+  maxzoom: 12,
+  type: 'heatmap',
+  'source-layer': 'dev_s_inc',
+  paint: {
+    // 'heatmap-weight': ['case', ['<', all, 1], 0.09, ['<=', all, 5], 0.5, ['>', all, 10], 1, 1],
+    'heatmap-intensity': 0.09,
+    'heatmap-color': [
+      'interpolate',
+      ['linear'],
+      ['heatmap-density'],
+      0,
+      'rgba(0, 0, 255, 0)',
+      0.1,
+      'hsla(225, 73%, 57%, 0.68)',
+      0.3,
+      'hsla(180, 100%, 50%, 0.65)',
+      0.5,
+      'lime',
+      0.7,
+      'hsla(60, 100%, 50%, 0.84)',
+      1,
+      'hsl(9, 95%, 54%)',
+    ],
+    'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 0, 30, 12, 100, 22, 100],
+    'heatmap-opacity': 0.7,
+  },
+};
+export const heatmapLayerUsers: HeatmapLayer = {
+  id: 'heatmap3',
+  minzoom: 0,
+  maxzoom: 22,
+  type: 'heatmap',
+  'source-layer': 'dev_s_inc',
+  paint: {
+    'heatmap-weight': [
+      'case',
+      ['<', ['get', 'userCount'], 1],
+      0.09,
+      ['<=', ['get', 'userCount'], 5],
+      0.5,
+      ['>', ['get', 'userCount'], 10],
+      1,
+      1,
+    ],
+    'heatmap-intensity': 0.09,
+    'heatmap-color': [
+      'interpolate',
+      ['linear'],
+      ['heatmap-density'],
+      0,
+      'rgba(0, 0, 255, 0)',
+      0.1,
+      'hsla(55, 100%, 50%, 0.9)',
+      0.3,
+      'hsla(46, 100%, 50%, 0.9)',
+      0.5,
+      'hsla(38, 100%, 50%, 0.9)',
+      0.7,
+      'hsla(35, 100%, 50%, 0.9)',
+      1,
+      'hsla(29, 100%, 50%, 0.9)',
+    ],
+    'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 0, 30, 12, 100, 22, 100],
+    'heatmap-opacity': 0.7,
+  },
+};

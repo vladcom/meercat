@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="Meercat" />
+    <meta name="application-name" content="Meercat" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Meercat" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link
+      rel="prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtT5ZvHdcnnnRpvxsQ5G3uoorp1ls3qrc&libraries=visualization,places,geometry"></script>
+    <title>Meercat</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <style>
+      .splash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 99999999999999;
+        background: white;
+        align-items: center;
+        justify-content: center;
+      }
+      .splash-back {
+        position: relative;
+        z-index: 1;
+      }
+      .splash-marker {
+        position: absolute;
+        z-index: 2;
+      }
+      .splash-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 600px;
+        height: 400px;
+      }
+      .splash-container-item {
+        z-index: 100;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .splash-container-item .marker {
+        z-index: 999999;
+        background-color: #efefef;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      .splash .circle {
+        border-radius: 50%;
+        background-color: #ffc90e;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+      }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.5, 0.5);
+          opacity: 0.5;
+        }
+        to {
+          transform: scale(2.5, 2.5);
+          opacity: 0;
+        }
+      }
+    </style>
+    <div id="root"></div>
+    <div data-initial-splash="true" class="splash">
+      <div class="splash-container-item">
+        <div class="marker">
+          <img src="/yellow.svg" alt="{MarkerIcon}" />
+        </div>
+        <div class="circle" style="animation-delay: -3s"></div>
+        <div class="circle" style="animation-delay: -2s"></div>
+        <div class="circle" style="animation-delay: -1s"></div>
+        <div class="circle" style="animation-delay: 0s"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/index.tsx"></script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

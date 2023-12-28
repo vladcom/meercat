@@ -1,0 +1,129 @@
+.map {
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 70px;
+
+  // @media all and (min-width: 768px) {
+  //   margin-bottom: 0 !important;
+  //   height: 100vh !important;
+  // }
+
+  &-action {
+    position: absolute !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: 120px;
+    left: 0;
+    z-index: 1;
+  }
+
+  &-filter {
+    width: 150px;
+    //position: sticky!important;
+    position: device-fixed !important;
+    position: fixed;
+    height: 70px;
+    z-index: 1;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media all and (min-width: 768px) {
+      top: 70px !important;
+    }
+  }
+
+  &-markerInfo {
+    min-width: 150px;
+    width: auto;
+    max-width: 250px;
+    max-height: 300px;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    &-type {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 18px;
+      color: #9f9f9f;
+    }
+
+    &-userName {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      color: #484848;
+      font-size: 14px;
+    }
+
+    &-date {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      color: black;
+    }
+
+    &-text {
+      margin-top: 15px !important;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      color: #484848;
+      font-size: larger;
+
+      &-showMore {
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      &-link {
+        color: #1890ff;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          color: #127dde;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+
+    &-external {
+    }
+
+    &-actions {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        padding: 5px 10px !important;
+        min-width: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.markerSheet {
+  //z-index: 1!important;
+}
+
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-bottom-right {
+  display: none !important;
+}

@@ -1,0 +1,260 @@
+/**
+ *
+ * Basic Formatting
+ *
+ **/
+
+html {
+  box-sizing: border-box;
+  font-size: $base-fontsize;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  html {
+    font-size: $base-fontsize;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/**
+ * Body
+ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  //overflow-y: scroll;
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  font-family: $base-font;
+  font-size: $base-fontsize;
+  height: var(--app-height);
+  font-weight: 400;
+  line-height: $base-lineHeight;
+  text-align: left;
+  //text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.admin {
+  background: #f8f8f8;
+}
+
+body.no-scrollable {
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+/**
+ * Headlines
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline-font;
+  font-weight: 500;
+  color: #1e2c4f;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  line-height: initial;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  line-height: initial;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: initial;
+}
+
+h4 {
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  line-height: initial;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  line-height: initial;
+}
+
+h6 {
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  line-height: initial;
+}
+
+/**
+ * General Text Formattings
+ */
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em,
+dfn {
+  font-style: italic;
+}
+
+address {
+  font-style: normal;
+}
+
+abbr {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  cursor: help;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+sub {
+  top: 4px;
+}
+
+sup {
+  top: -6px;
+}
+
+q,
+cite,
+blockquote {
+  font-family: $base-font;
+  font-style: italic;
+}
+
+hr {
+  height: 1px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 2em;
+}
+
+/**
+ * Images
+ */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.aim {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: auto;
+  transform: translate(-50%, -118%);
+}
+
+a[title^='Open this area in Google Maps (opens a new window)'] {
+  display: none !important;
+}
+
+.watermark {
+  position: absolute;
+  z-index: 1;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #7a7a7a;
+  font-family: 'Roboto', sans-serif;
+  left: 18px;
+  bottom: 0;
+}
+
+.errorText {
+  font-style: italic;
+}
+
+.aim {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 60px;
+  transform: translate(-50%, -118%);
+}
+
+.activeMarker {
+  width: auto;
+  height: 60px;
+}
+
+.mapboxgl-user-location-accuracy-circle {
+  background-color: transparent !important;
+}
+
+.devMode {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  padding: 5px;
+  border-radius: 8px 8px 0 0;
+}
+
+.singlePage {
+  .map, .map-action {
+    display: none;
+  }
+}
+
+.MuiDateRangeCalendar-root {
+  &:last-child {
+    //display: none!important;
+  }
+}

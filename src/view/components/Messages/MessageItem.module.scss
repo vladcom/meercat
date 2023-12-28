@@ -1,0 +1,53 @@
+.messageElement {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 600px;
+
+  &.deleted {
+    display: none;
+  }
+  &-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  &-message {
+    position: relative;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 66px;
+    border-bottom: 1px solid #dadada;
+
+    &-header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &.deleting {
+      background: gainsboro;
+      opacity: 0.2;
+    }
+
+    p {
+      margin: 0;
+      word-break: break-word;
+    }
+
+  }
+}
+
+.deletingSpinnerContainer {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}

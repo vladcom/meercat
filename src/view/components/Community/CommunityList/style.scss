@@ -1,0 +1,44 @@
+.commList {
+  padding: 0 20px;
+
+  &-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    &-header {
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &-item {
+      border-radius: 30px;
+      background: #e9e9e9;
+      padding: 30px;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+  }
+
+  &-noCom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 30px;
+    background: #e9e9e9;
+    max-width: 500px;
+    width: 100%;
+    cursor: pointer;
+  }
+}

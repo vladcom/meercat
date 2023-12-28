@@ -1,0 +1,264 @@
+.reportWindow {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  &-header {
+    //position: device-fixed !important;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 99999999999999999;
+    top: 0;
+    background-color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  &-close {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+  }
+
+  &-map {
+    //margin-top: 70px;
+    position: relative;
+    width: 100%;
+    height: 35%;
+  }
+
+  &-form {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-actions {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-category {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &-title {
+        margin-right: 20px;
+      }
+    }
+
+    &-start {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-direction: column;
+
+      .errorText {
+        font-style: italic;
+        margin-top: 5px;
+        color: #fd3c3c;
+        font-size: 14px;
+      }
+
+      .errorInput {
+        .MuiOutlinedInput-root {
+          border: 1px solid red !important;
+          border-radius: 5px !important;
+        }
+      }
+
+      &-title {
+        color: rgba(0, 0, 0, 0.54);
+        margin-right: 20px;
+      }
+
+      .MuiInputBase-root {
+        padding-top: 0 !important;
+      }
+    }
+
+    &-upload {
+      &-preview {
+        max-height: 150px;
+        margin-bottom: 15px;
+      }
+
+      &-loaded {
+        max-width: 400px;
+        align-self: center;
+        border: 1px dashed rgba(25, 118, 210, 0.71);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+    }
+
+    &-proposes {
+      margin: 15px 0;
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: row;
+
+      &-item {
+        margin-bottom: 10px !important;
+        width: auto !important;
+        font-size: 12px !important;
+        margin-right: 10px !important;
+      }
+    }
+
+    &-confirm {
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 188px !important;
+      }
+    }
+  }
+  &-fieldBox {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .MuiInputBase-root {
+      padding-top: 10px;
+      background-color: #eeeeee4f !important;
+    }
+  }
+
+  &-category {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &-header {
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 20px 0;
+      position: relative;
+
+      .closeButtonWindow {
+        @media all and (max-width: 425px) {
+          width: 15px;
+          height: auto;
+        }
+      }
+
+
+      &-text {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        p {
+          padding: 0;
+          margin: 0;
+          font-size: 20px;
+
+          @media all and (max-width: 375px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .reportWindow-close {
+        position: inherit;
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 963px;
+      width: 100%;
+      margin: 0 auto;
+
+      &-item {
+        padding: 30px;
+        display: flex;
+        flex: 1 0 32%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        align-self: flex-start;
+
+        span {
+          text-align: center;
+          margin-top: 10px;
+        }
+
+        svg {
+          width: 50px;
+          height: auto;
+        }
+
+        @media all and (max-width: 425px) {
+          flex: 1 0 32%;
+          flex-grow: 1;
+          width: 100px;
+
+          span {
+            font-size: 12px;
+            margin-top: 0;
+          }
+
+          img {
+            width: 40px!important;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.markerActions {
+  width: 100%;
+  height: 70px;
+  z-index: 99999999 !important;
+  pointer-events: all;
+  margin-bottom: 10px;
+}
+
+.incidentCardHeader {
+  margin-top: 20px;
+}

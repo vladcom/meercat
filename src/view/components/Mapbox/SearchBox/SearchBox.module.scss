@@ -1,0 +1,23 @@
+.searchBox {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  z-index: 1;
+
+  @media all and (max-width: 768px) {
+    left: 10px;
+  }
+
+  :global {
+    .MuiFormControl-root {
+      width: 250px;
+      background: white;
+      border-radius: 4px;
+    }
+  }
+}
+
+
+.MuiPopper-root .MuiAutocomplete-noOptions {
+  display: none;
+}

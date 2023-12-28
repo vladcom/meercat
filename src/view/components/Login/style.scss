@@ -1,0 +1,109 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  &-logo {
+    margin: 0 auto;
+  }
+
+  &-title {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: inherit;
+  }
+
+  &-subTitle {
+    padding: 0;
+    margin: 0 0 30px;
+    line-height: inherit;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+  }
+  .react-code-input {
+    display: flex!important;
+    justify-content: center;
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance:textfield;
+    }
+
+    input {
+      border: 1px solid #C2C2C2;
+      border-radius: 5px;
+      height: 30px;
+      width: 30px;
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #000000;
+      background: white;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:not([value=""]) {
+        background: #EFEFEF;
+        border: #EFEFEF;
+      }
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number]::-webkit-outer-spin-button,
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance:textfield;
+      }
+    }
+  }
+  &-confirm {
+    margin-top: 30px!important;
+  }
+
+  .resend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 15px;
+      color: #464646;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 15px;
+      color: #058aff;
+    }
+  }
+}

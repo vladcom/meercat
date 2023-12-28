@@ -1,0 +1,95 @@
+body[data-os='iOS'],
+body[data-os='Android OS'] {
+  .messages {
+    &-container {
+      @media all and (max-width: 768px) {
+        height: 500px;
+      }
+    }
+  }
+}
+.messages {
+  z-index: 2;
+  height: 500px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-container {
+    height: 100%;
+    overflow-y: scroll;
+    &-box {
+      margin: 10px auto 0;
+      display: flex;
+      flex-direction: column;
+      .element {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &.isLoaderRow {
+          width: 100%;
+        }
+        &.isMyMessage {
+          left: initial;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &-form {
+    width: calc(100% - 38px);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 8px;
+    max-width: 600px;
+
+    .MuiFormControl-root {
+      width: 100% !important;
+    }
+  }
+}
+
+.alignSelfEnd {
+  align-self: flex-end;
+  justify-content: flex-end !important;
+}
+
+.alignSelfStart {
+  align-self: flex-start !important;
+}
+
+.sendButtonMessage {
+  background: transparent!important;
+  box-shadow: none;
+}
+
+.disabledSentButton {
+  transition: 0.3s ease-in;
+}
+
+.activeSentButton {
+  transition: 0.3s ease-in;
+  color: #1976d2!important;
+}

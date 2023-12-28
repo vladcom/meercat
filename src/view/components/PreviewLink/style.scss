@@ -1,0 +1,52 @@
+.preview {
+  border-radius: 3px;
+  border: 1px solid #e3e3e3;
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  cursor: pointer;
+
+  @media all and (max-width: 700px) {
+    flex-direction: column;
+  }
+
+  &-image {
+    margin-right: 30px;
+    @media all and (max-width: 700px) {
+      margin-right: 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      @media all and (max-width: 700px) {
+        max-width: 100%;
+      }
+    }
+
+    svg {
+      font-size: 50px;
+    }
+  }
+
+  &-text {
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    &-title {
+      line-height: 25px;
+      @media all and (max-width: 700px) {
+        margin-top: 10px!important;
+      }
+    }
+
+    &-description {
+      margin-top: 20px!important;
+      font-size: 14px;
+      color: grey;
+      line-height: 16px;
+    }
+  }
+}

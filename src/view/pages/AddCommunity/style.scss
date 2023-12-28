@@ -1,0 +1,15 @@
+.add-comm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+
+    &-title {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://segefy.pp.ua/api/:path*"
+    },
+    {
+      "source": "/tiles/:path*",
+      "destination": "https://segefy.pp.ua/:path*"
+    },
+    {
+      "source": "/socket/:path*",
+      "destination": "https://segefy.pp.ua/socket/:path*"
+    },
+    {
+      "source": "/socket/(.*)",
+      "destination": "https://segefy.pp.ua/socket/(.*)"
+    },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}

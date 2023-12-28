@@ -1,0 +1,401 @@
+.userProfile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  flex-direction: column;
+  position: relative;
+  padding: 0 20px;
+
+  &-types {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &-item {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      border: 1px solid #9f9f9f;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: 0.2s ease-in;
+
+      @media all and (min-width: 768px) {
+        width: 100px!important;
+        height: 100px!important;
+
+        img {
+          width: 40px!important;
+        }
+
+        &-title {
+          font-size: 13px;
+        }
+      }
+
+      &-active {
+        border: 1px solid transparent!important;
+        box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.43);
+      }
+
+      &:hover {
+        background: #fff0d5;
+        transition: 0.2s ease-in;
+      }
+
+      img {
+        width: 80px;
+      }
+
+      &-title {
+        text-align: center;
+        padding: 0;
+        margin: 10px 0 0;
+      }
+
+      &-check {
+        position: absolute!important;
+        padding: 0!important;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        transform: translate(25%, -25%);
+        background: white!important;
+      }
+    }
+  }
+
+  &-placeInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &-map {
+      margin-top: 10px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .mapboxgl-map {
+        margin: 0!important;
+      }
+      span {
+        //position: absolute;
+        //bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 15px;
+      }
+    }
+
+    &-header {
+      position: relative;
+      height: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 0;
+        margin: 0;
+      }
+
+      &-titleLabel {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+
+        p {
+          padding: 0;
+          margin: 0;
+          text-align: center;
+        }
+        &-address {
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-slider {
+      max-width: 300px;
+      width: 100%;
+      margin: 10px auto 0;
+    }
+  }
+
+  &-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 20px;
+
+    &-user {
+
+      &-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      &-editUser {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-info {
+        padding: 0;
+        margin: 10px auto 0;
+        font-size: 13px;
+        text-align: center;
+        color: gray;
+      }
+    }
+
+    &-box {
+      margin-top: 10px;
+      width: 100%;
+
+      &-selector {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          font-size: 16px;
+          cursor: pointer;
+          border: none;
+          background: transparent;
+
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &-content {
+
+        &-add {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          background: #72b9ff;
+          padding: 15px;
+          cursor: pointer;
+          margin-bottom: 30px;
+
+          p {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-logout {
+    //position: absolute;
+    //right: 0;
+  }
+
+  &-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-notifications {
+      &-title {
+        text-align: center;
+        margin-bottom: 0!important;
+        padding-bottom: 0!important;
+      }
+      &-subTitle {
+        margin-top: 5px!important;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .MuiFormControl-root {
+
+      }
+    }
+
+    &-submit {
+      margin-top: 20px;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    &-header {
+      padding: 5px 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      &-back {
+        color: #1976d2;
+      }
+
+      &-delete {
+        color: red;
+      }
+    }
+
+    &-title {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-places {
+    position: relative;
+    width: 100%;
+
+    &-container {
+      margin-top: 20px;
+    }
+
+    &-item {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid #72b9ff;
+      margin-bottom: 15px;
+      padding: 15px 15px 10px;
+
+      &-info {
+        p {
+          padding: 0;
+          margin: 0;
+          line-height: 15px;
+        }
+
+        span {
+          color: grey;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-item {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid #72b9ff;
+      margin-bottom: 15px;
+      padding: 15px 15px 10px;
+    }
+
+    &-myInc {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid #72b9ff;
+      margin-bottom: 15px;
+      padding: 10px;
+
+      &-description {
+        width: 100%;
+        margin-left: 10px;
+
+        &-address {
+          padding: 0;
+          margin: 0;
+          color: #454545;
+          font-size: 12px;
+        }
+        &-date {
+          padding: 0;
+          margin: 0;
+          color: grey;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-modal {
+      &-title {
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      &-actions {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    &-title {
+      margin-top: 50px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    &-add {
+      position: absolute!important;
+      right: 0!important;
+      top: -3px!important;
+
+      &-radius {
+        width: 165px!important;
+        margin-left: 12px!important;
+      }
+    }
+  }
+}
